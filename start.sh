@@ -6,7 +6,7 @@ echo "SERVER_PORT=${SERVER_PORT:-8080}"
 mkdir -p /tmp/baihu
 
 wget -q -O /tmp/baihu.tar.gz \
-  "https://github.com/engigu/baihu-panel/releases/download/v1.4.2/baihu-linux-amd64.tar.gz"
+  "https://github.com/engigu/baihu-panel/releases/download/v1.7.0/baihu-linux-amd64.tar.gz"
 
 tar -xzf /tmp/baihu.tar.gz -C /tmp/baihu
 
