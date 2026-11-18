@@ -1,7 +1,10 @@
+
 #!/bin/sh
 set -e
 
-echo "SERVER_PORT=${SERVER_PORT:-8080}"
+PORT=9400
+
+echo "SERVER_PORT=$PORT"
 
 mkdir -p /tmp/baihu
 
@@ -15,8 +18,8 @@ rm -f /tmp/baihu.tar.gz
 chmod 755 /tmp/baihu/baihu-linux-amd64
 
 export BH_SERVER_HOST=0.0.0.0
-export BH_SERVER_PORT="${SERVER_PORT:-8080}"
+export BH_SERVER_PORT="$PORT"
 
-echo "Starting Baihu on port: $BH_SERVER_PORT"
+echo "Starting Baihu on port: $PORT"
 
 exec /tmp/baihu/baihu-linux-amd64 server
